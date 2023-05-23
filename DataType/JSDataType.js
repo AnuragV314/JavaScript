@@ -57,4 +57,4 @@ console.log(typeof(names), names);
 
 // Date
 const date = new Date();
-console.log(typeof(date), date);
+console.log(typeof(date), date); 

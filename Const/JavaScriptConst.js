@@ -23,7 +23,6 @@ console.log(cars[3]);
 // cars = ["Toyota", "Volvo", "Audi"];    // ERROR
 
 
-
 // Constant Objects
 
 // You can create a const object:
