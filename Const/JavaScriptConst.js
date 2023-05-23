@@ -39,3 +39,6 @@ console.log(car.type);
 
 // you can NOT reassign the object
 // car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
+
+
+
