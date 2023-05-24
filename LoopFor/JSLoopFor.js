@@ -51,12 +51,12 @@ for (variable of iterable) {
 }
 */
 
-// Looping over an Array
+// Looping over an Array -- for in 
 for (let y of cars){
     console.log(y);
 }
 
-// Looping over a String
+// Looping over a String -- for of -- Iterables
 let language = "JavaScript";
 for(let x of language){
     console.log(x);
