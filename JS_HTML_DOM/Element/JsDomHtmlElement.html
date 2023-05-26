@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h2>JavaScript HTML DOM</h2>
+
+    <!-- Finding HTML Element by Id -->
+    <p id="intro">Finding HTML Elements by Id</p>
+    <p>This example demonstrates the <b>getElementsById</b> method.</p>
+    <p id="demo"></p>
+
+    <br>
+    <!-- Finding HTML Elements by Tag Name -->
+    <p>Finding HTML Elements by Tag Name.</p>
+    <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    <p id="demo1"></p>
+
+    <br>
+    <div id="main">
+        <p>Finding HTML Elements by Tag Name.</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+        <p id="demo3"></p>
+    </div>
+
+    <br>
+    <!-- Finding HTML Elements by Class Name -->
+    <div id="main2">
+        <p>Finding HTML Elements by Class Name.</p>
+        <p class="intro">Hello World!</p>
+        <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+        <p id="demo4"></p>
+    </div>
+
+
+    <br>
+    <!-- Finding HTML Elements by CSS Selectors -->
+    <div id="main3">
+        <p>Finding HTML Elements by Query Selector</p>
+        <p class="intro">Hello World!.</p>
+        <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+        <p id="demo5"></p>
+    </div>
+
+    <br>
+    <!-- Finding HTML Elements by HTML Object Collections -->
+    <form id="frm1">
+        First name: <input type="text" name="fname" value="Anurag"><br>
+        Last name: <input type="text" name="lname" value="Verma"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>These are the values of each element in the form:</p>
+    <p id="demo6"></p>
+
+    <br>
+
+
+    <script>
+        // Finding HTML Element by Id
+        const element = document.getElementById("intro");
+        document.getElementById("demo").innerHTML = "The text from into the intro paragraph is : " + element.innerHTML;
+
+        // inding HTML Elements by Tag Name 
+        const element1 = document.getElementsByTagName("p");
+        document.getElementById("demo1").innerHTML = 'The text in paragraph (index 3) is: ' + element1[3].innerHTML;
+
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("demo3").innerHTML = 'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+        // Finding HTML Elements by Class Name
+        const x1 = document.getElementById("main2");
+        const y1 = x1.getElementsByClassName('intro');
+        document.getElementById('demo4').innerHTML = 'The paragraph (index 0) with class="intro" is: ' + y1[0].innerHTML;
+
+        // Finding HTML Elements by CSS Selectors
+        const x2 = document.getElementById("main3");
+        const y2 = x2.querySelectorAll("p.intro");
+        document.getElementById("demo5").innerHTML = 'The paragraph (index 0) with class="intro" is : ' + y2[0].innerHTML;
+
+        // Finding HTML Elements by HTML Object Collections
+        const x3 = document.forms["frm1"]
+        let text = "";
+        for (let i = 0; i < x3.length; i++) {
+            text += x3.elements[i].value + "<br>";
+        }
+        document.getElementById("demo6").innerHTML = text;
+
+    </script>
+</body>
+
+</html>
